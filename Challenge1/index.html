@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spaceship Dashboard</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Orbitron:wght@400;500;600;700;800;900&family=Reggae+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Turret+Road:wght@200;300;400;500;700;800&family=Zen+Dots&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles/mystyle.css">
+        <script src="scripts/main.js" defer></script>
+    </head>
+    <body>
+
+        <div class="suplies">
+            <a href="#"><h1> Dashboard</h1></a>
+            <p id="waterIndicator" class="inventoryIndicator" style="opacity: 0">Water: 50</p>
+            <p id="foodIndicator" class="inventoryIndicator" style="opacity: 0">Food: 25</p>
+        </div>
+        <!--
+<div class="dashboard">
+<a href=""><div class="dashboardButtons"><h2>Speed</h2></div></a>
+<a href=""><div class="dashboardButtons"><h2>Calculator</h2></div></a>
+<a href="#foodInventory"><div class="dashboardButtons"><h2>Supplies</h2></div></a>
+</div>
+-->
+
+
+        <div id="converter">
+            <div>
+                <h2 id="milesConverterTitle">Miles Converter<h2>
+                    <form>
+                        <label class="miles">Earth Miles</label>
+                        <input id="earthMiles" class="milesInput" type="number" oninput="marsMilesConverter(this.value)" onchange="marsMilesConverter(this.value)">
+                        <label class="miles">Mars Miles</label>
+                        <input id="marsMiles" class="milesInput" type="number" oninput="earthMilesConverter(this.value)" onchange="earthMilesConverter(this.value)">
+                    </form>
+             </div>
+            </div>
+
+                <!--
+<ul>Ship Parameters
+<li>Fuel</li>
+<li>Throttle</li>
+<li>Speed</li>
+<li>G-Force</li>
+</ul>
+<ul>Ship Parameters
+<li>Gravity</li>
+<li>Distance Travelled</li>
+<li>Atmosphere</li>
+</ul> 
+<ul>Supplies
+<li>Food</li>
+<li>Water</li>
+</ul>
+<ul>Metrics
+<li>Gravity Converter</li>
+<li>Mars Miles to Earth Miles Converter</li>
+</ul>
+-->
+
+
+
+                <div id="foodInventory" class="foodInventory" >
+                    <h2 class="sectionTitle"> Food Inventory</h2>
+                     <p id="foodIndicator" class="inventoryIndicator">Food: 25</p>
+                    <div class="foods">
+                        <div class="foodItems">
+                            <h4>Fruits</h4>
+                            <img class="inventoryItem" alt="Apple" src="images/apple.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Banana" src="images/banana.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Pineapple" src="images/pineapple.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Watermelon" src="images/watermelon.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Grapes" src="images/grapes.png" onclick="itemSelection(this)">
+                        </div>
+
+                        <div class="foodItems">
+                            <h4>Main Dish</h4>
+                            <img class="inventoryItem" alt="Ramen" src="images/ramen.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Suchi" src="images/sushi.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Soup" src="images/soup.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Osechi" src="images/osechi.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Ozoni" src="images/ozoni.png" onclick="itemSelection(this)">
+                        </div>    
+                        <div class="foodItems">
+                            <h4>Dessert</h4>
+                            <img class="inventoryItem" alt="Cake" src="images/cake.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Donut" src="images/donut.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Pancakes" src="images/pancake.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Waffles" src="images/waffles.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Ice Cream" src="images/icecream.png" onclick="itemSelection(this)">
+                        </div>
+                        <div class="foodItems">
+                            <h4>Snacks</h4>
+                            <img class="inventoryItem" alt="Chips" src="images/chips.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="French Fries" src="images/french-fries.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Salad" src="images/salad.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Onion Rings" src="images/onionRings.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Noodles" src="images/noodles.png" onclick="itemSelection(this)">
+                        </div>
+                        <div class="foodItems">
+                            <h4>Other</h4>
+                            <img class="inventoryItem" alt="Pizza" src="images/pizza.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Burger" src="images/burger.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Fried Chicken" src="images/friedChicken.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Sandwich" src="images/sandwich.png" onclick="itemSelection(this)">
+                            <img class="inventoryItem" alt="Bacon and Eggs" src="images/eggs.png" onclick="itemSelection(this)">
+                        </div>
+                    </div>
+                    <div class="waterInventory">
+                        <h2 class="sectionTitle"> Water Inventory</h2>
+                        <p id="waterIndicator" class="inventoryIndicator">Water: 50</p>
+                        <div class="foods">
+                            <div class="waterItem">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                            </div>
+                            <div class="waterItem">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                            </div>
+                            <div class="waterItem">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                            </div>    
+                            <div class="waterItem">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                            </div>
+                            <div class="waterItem">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                                <img class="inventoryItem" alt="Water Bottle" src="images/mineral-water.png" onclick="itemSelection(this)">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="overlay"></div>
+                </body>
+            </html>
