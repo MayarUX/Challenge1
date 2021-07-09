@@ -22,7 +22,6 @@ function updateTime(i) {
 }
 earthTime();
 
-//Animation
 
 
 
