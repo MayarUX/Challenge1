@@ -23,6 +23,12 @@ h1{
     letter-spacing: 8px;
 }
 
+h2{
+    margin-top: 250px;
+    text-align: center;
+    font-size: 72px;
+}
+
 a{
     color: rgba(240, 248, 255, 1);
     text-decoration: none;
@@ -34,6 +40,12 @@ img{
     z-index: 200;
 }
 
+#clockBackground{    
+    background-color: rgba(0, 30, 100, 0.6);
+}
+#clockBackground:hover{    
+    background-color: rgba(0, 100, 100, 0.6);
+}
 #overlay {
     position: fixed;
     width: 100%; 

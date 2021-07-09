@@ -1,9 +1,9 @@
+//Digital Clock
 function earthTime(){
     var today = new Date();
     var sec = today.getSeconds();
     var min = today.getMinutes();
     var hour = today.getHours();
-    var day = today.getDay();
     hour = updateTime(hour);
     min = updateTime(min);
     sec = updateTime(sec);
@@ -21,5 +21,17 @@ function updateTime(i) {
     }
 }
 earthTime();
+
+//Animation
+
+var changingThemes = document.getElementById('getTime');
+
+document.getElementById('playButton').onclick = function(){
+	changingThemes.style.animationPlayState = 'running';
+};
+
+document.getElementById('pauseButton').onclick = function(){
+	changingThemes.style.animationPlayState = 'paused';
+};
 
 
