@@ -24,14 +24,5 @@ earthTime();
 
 //Animation
 
-var changingThemes = document.getElementById('getTime');
-
-document.getElementById('playButton').onclick = function(){
-	changingThemes.style.animationPlayState = 'running';
-};
-
-document.getElementById('pauseButton').onclick = function(){
-	changingThemes.style.animationPlayState = 'paused';
-};
 
 
