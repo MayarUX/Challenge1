@@ -2,50 +2,26 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Back To Earth</title>
+        <title>Digital Clock</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Faster+One&family=Orbitron:wght@400;500;600;700;800;900&family=Reggae+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Turret+Road:wght@200;300;400;500;700;800&family=Zen+Dots&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles/mystyle.css">
         <script src="scripts/main.js" defer></script>
-        <script src="scripts/main2.js" defer></script>
     </head>
     <body>
 
         <div class="Header">
-            <a href="#"><h1> Back to Earth</h1></a>
+            <a href="#"><h1> Digital Clock</h1></a>
         </div>
 
-        <div class="Weather">
-            <form class="Search">
-                <fieldset>
-                    <legend>Get Weather</legend>
-                    <label for="city">Enter city name:</label>
-                    <input class="inputStyle" type="text" name="city" id="city" />
-                    <input type="button" id="getWeather" value="get weather" />
-                    <div class="WeatherData">
-                        <h4>1. Weather Description:</h4>
-                        <p id="weatherDescription">Cloudy</p>
-                        <h4>2. Clouds:</h4>
-                        <p id="weatherClouds">20%</p>
-                        <h4>3. Visibility:</h4>
-                        <p id="weatherVisibility">259m</p> 
-                        <h4>4. Temprature:</h4>
-                        <p id="weatherTemprature">22°C</p>
-                        <h4>5. Humidity:</h4>
-                        <p id="weatherHumidity">40%</p>
-                        <h4>6. Wind Speed:</h4>
-                        <p id="weatherWind">8km/h</p>
+        <div class="Time">
+        <h2 id="getTime"></h2>
 
-                    </div>
-                </fieldset>
-                
-                <h2> Image of landing place</h2>
-                <input type="button" id="changeImage" value="Change Image" />
-                <img id="earthImage" src="images/earth.jpg" alt="image of the day"/>
-            </form> 
+
         </div>
 
 
-        <div id="overlay"></div>
-    </body>
+
+<div id="overlay"></div>
+</body>
 </html>
