@@ -1,0 +1,83 @@
+html{
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: rgba(240, 248, 255, 1);
+    background-color: rgba(0, 0, 0, 1);
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    background-image: url("../images/pexels-pixabay-2159.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;  
+    text-decoration: none;
+    z-index: 0;
+}
+
+h1{
+    margin: 20px 50px 100px 50px;
+    font-family: 'Faster One', cursive;
+    font-size: 54px;
+    letter-spacing: 8px;
+}
+
+h2{
+    margin-top: 250px;
+    text-align: center;
+    font-size: 72px;
+}
+
+a{
+    color: rgba(240, 248, 255, 1);
+    text-decoration: none;
+}
+
+img{
+    width: 200px;
+    height: 200px;
+    z-index: 200;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+#clockBackground{    
+    background-color: rgba(0, 30, 100, 0.6);
+}
+
+/*
+#clockBackground:hover{    
+    background-color: rgba(0, 100, 100, 0.6);
+}
+*/
+
+.theme:hover {
+    transform: translate(0px, -10px);
+}
+
+#themes{
+    margin-left: 200px;
+}
+
+#themesTitle{
+    margin-left: 650px;
+    margin-bottom: 50px;
+    font-size: 28px;
+
+}
+
+#overlay {
+    position: fixed;
+    width: 100%; 
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: -1;
+}
+
+
+
