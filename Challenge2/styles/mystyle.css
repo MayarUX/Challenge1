@@ -35,17 +35,38 @@ a{
 }
 
 img{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     z-index: 200;
+    border-radius: 5px;
+    margin-right: 20px;
 }
 
 #clockBackground{    
     background-color: rgba(0, 30, 100, 0.6);
 }
+
+/*
 #clockBackground:hover{    
     background-color: rgba(0, 100, 100, 0.6);
 }
+*/
+
+.theme:hover {
+    transform: translate(0px, -10px);
+}
+
+#themes{
+    margin-left: 200px;
+}
+
+#themesTitle{
+    margin-left: 650px;
+    margin-bottom: 50px;
+    font-size: 28px;
+
+}
+
 #overlay {
     position: fixed;
     width: 100%; 

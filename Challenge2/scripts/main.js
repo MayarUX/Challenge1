@@ -26,12 +26,10 @@ earthTime();
 
 var changingThemes = document.getElementById('getTime');
 
-document.getElementById('playButton').onclick = function(){
-	changingThemes.style.animationPlayState = 'running';
+
+document.getElementById('theme1').onclick = function(){
+	document.getElementsByTagName('html').style.backgroundImage = url("../images/pexels-miriam-espacio-110854.jpg");
 };
 
-document.getElementById('pauseButton').onclick = function(){
-	changingThemes.style.animationPlayState = 'paused';
-};
 
 
