@@ -27,9 +27,15 @@ earthTime();
 var changingThemes = document.getElementById('getTime');
 
 
-document.getElementById('theme1').onclick = function(){
-	document.getElementsByTagName('html').style.backgroundImage = url("../images/pexels-miriam-espacio-110854.jpg");
-};
+function changeTheme(theme){
+    document.html.style.backgroundImage = "url(" + theme + ")";
+}
+
+
+//document.getElementById('theme1').onclick = function(){
+//	document.getElementsByTagName('html').style.backgroundImage = url("../images/pexels-miriam-espacio-110854.jpg");
+    
+//};
 
 
 
