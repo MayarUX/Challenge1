@@ -48,9 +48,16 @@ img{
 
 /*
 #clockBackground:hover{    
-    background-color: rgba(0, 100, 100, 0.6);
+background-color: rgba(0, 100, 100, 0.6);
 }
 */
+
+.movingObject{
+    width: 50px;
+    height: 50px;  
+    position: absolute;
+    z-index: -1;
+}
 
 .theme:hover {
     transform: translate(0px, -10px);
@@ -76,13 +83,57 @@ img{
     right: 0;
     bottom: 0;
     background-color: rgba(0,0,0,0.4);
-    z-index: -1;
+    z-index: -5;
 }
 
+#satellite{
+    margin-top: 100px;
+    margin-left: 600px;
+    animation: 1000ms pulsate infinite alternate ease-in-out;
+}
+
+#uranus{
+    margin-top: 150px;
+    margin-left: 400px;
+    animation: 1000ms pulsate infinite alternate ease-in-out;
+}
+
+#jupiter{
+    margin-top: 200px;
+    margin-left: 1000px;
+    animation: 1000ms pulsate infinite alternate ease-in-out;
+}
+
+/*
+#satellite:hover{
+        animation: 1000ms resize infinite alternate ease-in-out;
+}
+*/
+
+
+/*
 @keyframes moveTitle{
-    
+
 
 } 
+*/
+
+@keyframes pulsate {
+    0% { 
+        top: 100px; 
+    }
+    100% { 
+        top: 85px;
+    }
+    @keyframes resize {
+        0% { 
+            width: 50px;
+            height: 50px;
+        }
+        100% { 
+            width: 70px;
+            height: 70px;
+        }
 
 
 

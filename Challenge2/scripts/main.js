@@ -28,14 +28,20 @@ var changingThemes = document.getElementById('getTime');
 
 
 function changeTheme(theme){
-    document.html.style.backgroundImage = "url(" + theme + ")";
+//    document.html.style.backgroundImage = "url(" + theme + ")";
+//    document.getElementById('clockBackground').style.backgroundImage = theme;
 }
 
 
-//document.getElementById('theme1').onclick = function(){
-//	document.getElementsByTagName('html').style.backgroundImage = url("../images/pexels-miriam-espacio-110854.jpg");
+document.getElementById('theme1').onclick = function(){
+	document.getElementsByTagName('html').style.backgroundImage = url("../images/pexels-miriam-espacio-110854.jpg");
     
-//};
+};
+
+document.getElementById('clockBackground').onclick = function(){
+	document.getElementsByTagName('clockBackground').style.backgroundColor = "red";
+    
+};
 
 
 
